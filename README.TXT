@@ -3,44 +3,15 @@ PROJECT TITLE: AP CSA Assignment 1 (An interactive seating chart using Greenfoot
 
 PURPOSE OF PROJECT: The purpose of this assignment is to visually work with classes and subclasses, abstract classes, and interfaces, and to familiarize yourself with the basics of the GIT command line.  As a side effect, it will help your instructor learn your names!
 
-VERSION or DATE: 08/13/2017
+VERSION or DATE: 08/13/2018
 
 HOW TO START THIS PROJECT:  To start this project, assuming that you have Greenfoot installed, click on the greenfoot project file within the top level of the assignment directory.  If greenfoot is correctly installed, you will see a green foot icon just to the left of "project".
 
 AUTHORS:                    Mr. Kaehms and CSA students
 
 CONTRIBUTERS:               Kilgore Trout
-                            Nikolai Peram
-                            Latisha Sumardy
-                            Sean Tseng
-                            Uday Kalra
-                            John So
-                            Uday Kalra
-			    Mark Kong
-			    Adrian Liu
-                            Jaiveer Singh
-                            Justin Lee
-                            Harsha Jagarlamudi
-                            Neha Harpanhalli
-			    Will Lavanakul
-			    Camryn Lee
-			    Gustavo Silvera
-			    Rishabh Lenka
-			    Camryn Lee
-			    Aakash Balaji
-		            CJ Yu
-			    Michael Zhu
-			    Noor Haider
-			    Christy Koh
-			    Matthew Adrian
-			    Stanley Jiang
-			    Isaiah Cruz  
-			    Megan Leng
-			    Bharath Senthilkumar
-			    Noah Boursier
-			    Hannah Edge
-			    Priyanka Nagasamudra
-
+                            (Add you name here once your code 
+                             is added and correct)
 
 USER INSTRUCTIONS:
 
