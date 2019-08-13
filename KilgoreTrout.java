@@ -26,9 +26,11 @@ public class KilgoreTrout extends Student implements SpecialInterestOrHobby
         lastName=l;
         myRow=r;
         mySeat=s;
-        imgFile=f.toLowerCase()+l.toLowerCase()+".jpg";    // Make sure to name your image files firstlast.jpg, all lowercase!!!
+        portraitFile=f.toLowerCase()+l.toLowerCase()+".jpg";    // Make sure to name your image files firstlast.jpg, all lowercase!!!
+        standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
         soundFile=f.toLowerCase()+l.toLowerCase()+".wav";  // Make sure to name your sound files firstlast.wav, all lowercase!!!
-        setImage(imgFile);
+        setImage(portraitFile);
+        sitting=true;
     }
     /*
      * Default constructor, if you don't pass in a name and seating location
@@ -38,9 +40,12 @@ public class KilgoreTrout extends Student implements SpecialInterestOrHobby
         lastName="Trout";
         myRow=1;
         mySeat=1;
-        imgFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
+       // imgFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
+       portraitFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
+       standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
         soundFile=firstName.toLowerCase()+ lastName.toLowerCase()+".wav";
-        setImage(imgFile);
+        setImage(portraitFile);
+        sitting=true;
     }
     
      /**
@@ -51,17 +56,25 @@ public class KilgoreTrout extends Student implements SpecialInterestOrHobby
     {
         // Add your action code here.
         if(Greenfoot.mouseClicked(this)){
-            System.out.println(""); // Print a blank line to create space between any student output.
-            getName();
-            sayName(soundFile);
+            if (sitting){
+                sitting=false;
+                setImage(standingFile);
+                System.out.println(""); // Print a blank line to create space between any student output.
+                getName();
+                sayName(soundFile);
             
-            myHobby("I like to time travel!");
+                myHobby("I like to time travel!");
             // Create a "special method for your class and put the call here.  You can twirl your image, resize it, move it around, change transparancy, or a 
             // combination of all of those types of actions, or more. Make sure to save the original image if you manipulate it, so that you can put it back.
             // Call the sitDown() method to move back  to your seat
             
-            circleClass();  // Kilgore Trount's special method... Please write one of your own. You can use this, but please modify it and be creative.
-          
+                circleClass();  // Kilgore Trount's special method... Please write one of your own. You can use this, but please modify it and be creative.
+            }
+            else {
+                answerQuestion();
+                sitDown();
+            }
+                    
         }
     } 
     
@@ -70,6 +83,21 @@ public class KilgoreTrout extends Student implements SpecialInterestOrHobby
      */
     public void getName(){
         System.out.println("My name is " + firstName + " " + lastName);
+    }
+    public void answerQuestion(){
+        String q=Greenfoot.ask("What would you like to know");
+        if (q.contains("hard")){
+            q=Greenfoot.ask("2D arrays, recursion, and merge sort... May I sit down?");
+        
+        }
+        else {
+          q=Greenfoot.ask("I don't understand the question... May I sit down?"); 
+        }
+         if (q.equals("yes")){
+            Greenfoot.delay(10);
+            sitDown();
+        }
+        
     }
     public void circleClass(){
         setLocation(0,0);
@@ -95,7 +123,7 @@ public class KilgoreTrout extends Student implements SpecialInterestOrHobby
             Greenfoot.delay(10);
         }   
            Greenfoot.delay(20);
-           sitDown();
+           returnToSeat();
     }
      public void myHobby(String s) {
          System.out.println(s);
