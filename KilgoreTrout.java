@@ -1,15 +1,15 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class here.
+ * The KilgoreTrout class can be used as a model for your own class that represents you and your seating location in AP CSA
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Mr. Kaehms
+ * @version 2.0 Aug 13, 2019
  */
 public class KilgoreTrout extends Student implements SpecialInterestOrHobby
 {
 
-    /*
+    /**
      * Constructor for the KilgoreTrout class.
      * Constructors are special methods with the same exact name as the class name.  
      * Constructors to not have return types.
@@ -32,8 +32,10 @@ public class KilgoreTrout extends Student implements SpecialInterestOrHobby
         setImage(portraitFile);
         sitting=true;
     }
-    /*
+    /**
      * Default constructor, if you don't pass in a name and seating location
+     * Pay attention to how the row and seat variables set the location of the image.  1,1 is the first cell in the upper left
+     * of the classroom.
      */
     public KilgoreTrout() {
         firstName="Kilgore";
@@ -84,6 +86,12 @@ public class KilgoreTrout extends Student implements SpecialInterestOrHobby
     public void getName(){
         System.out.println("My name is " + firstName + " " + lastName);
     }
+    /**
+     * This method needs to allow the user to interact with the student through a question and answer interface, and provide
+     * some mechanism that allows the student to sit down once the Q&A session ends.  You can use this basic model, or come up
+     * with some additional class and object that represents a blackboard, or a talking cartoon bubble etc. If you provide extra
+     * classes, make sure to fully document so other students can use the same interface.
+     */
     public void answerQuestion(){
         String q=Greenfoot.ask("What would you like to know");
         if (q.contains("hard")){
@@ -99,6 +107,10 @@ public class KilgoreTrout extends Student implements SpecialInterestOrHobby
         }
         
     }
+    /**
+     * This is a local method specific to the KilgoreTrout class used to animate the character once the image is clicked on.
+     * You can write your own methods to perform your own animation for your character/avatar.
+     */
     public void circleClass(){
         setLocation(0,0);
          Greenfoot.delay(10);
