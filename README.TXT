@@ -7,9 +7,9 @@ VERSION or DATE: 08/13/2018
 
 HOW TO START THIS PROJECT:  To start this project, assuming that you have Greenfoot installed, click on the greenfoot project file within the top level of the assignment directory.  If greenfoot is correctly installed, you will see a green foot icon just to the left of "project".
 
-AUTHORS:                    Mr. Kaehms and CSA students
+AUTHORS:                    Zuhair Jafri
 
-CONTRIBUTERS:               Kilgore Trout
+CONTRIBUTERS:               Zuhair Jafri
                             (Add you name here once your code 
                              is added and correct)
 
